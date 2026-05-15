@@ -76,10 +76,7 @@ while True:
 
 
 
-
-
-
-
+#Same as Youtube control, PPT Slides control
 
 # import serial
 # import pyautogui

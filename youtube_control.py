@@ -81,51 +81,46 @@ while True:
 
 
 
-import serial
-import pyautogui
+# import serial
+# import pyautogui
 
-# Open the correct COM port (check Arduino IDE, e.g., COM5)
-arduino = serial.Serial('COM5', 9600)
-
-
+# # Open the correct COM port (check Arduino IDE, e.g., COM5)
+# arduino = serial.Serial('COM5', 9600)
 
 
+# CODES = {
+#     "FE017F80": "START",    # Play/Pause → Start slideshow
+#     "FC037F80": "NEXT",     # Forward → Next slide
+#     "FD027F80": "PREV",     # Backward → Previous slide
+#     "ED127F80": "EXIT",     # Power → Exit slideshow
+#     "E51A7F80": "TOGGLE"    # Mode → Toggle black/white
+# }
+# print("Ready: Use your remote to control Slides")
+# while True:
+#     if arduino.in_waiting > 0:
+#         code = arduino.readline().decode().strip().upper()
 
+#         if code in CODES:
+#             action = CODES[code]
 
+#             if action == "START":
+#                 pyautogui.press("f5")
+#                 print("Slideshow started")
 
-CODES = {
-    "FE017F80": "START",    # Play/Pause → Start slideshow
-    "FC037F80": "NEXT",     # Forward → Next slide
-    "FD027F80": "PREV",     # Backward → Previous slide
-    "ED127F80": "EXIT",     # Power → Exit slideshow
-    "E51A7F80": "TOGGLE"    # Mode → Toggle black/white
-}
-print("Ready: Use your remote to control YouTube")
-while True:
-    if arduino.in_waiting > 0:
-        code = arduino.readline().decode().strip().upper()
+#             elif action == "NEXT":
+#                 pyautogui.press("right")
+#                 print("Next slide")
 
-        if code in CODES:
-            action = CODES[code]
+#             elif action == "PREV":
+#                 pyautogui.press("left")
+#                 print("Previous slide")
 
-            if action == "START":
-                pyautogui.press("f5")
-                print("Slideshow started")
+#             elif action == "EXIT":
+#                 pyautogui.press("esc")
+#                 print("Exited slideshow")
 
-            elif action == "NEXT":
-                pyautogui.press("right")
-                print("Next slide")
-
-            elif action == "PREV":
-                pyautogui.press("left")
-                print("Previous slide")
-
-            elif action == "EXIT":
-                pyautogui.press("esc")
-                print("Exited slideshow")
-
-            elif action == "TOGGLE":
-                pyautogui.press("b")  # Black screen toggle
-                print("Black screen toggled")
+#             elif action == "TOGGLE":
+#                 pyautogui.press("b")  # Black screen toggle
+#                 print("Black screen toggled")
 
 

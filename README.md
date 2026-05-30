@@ -10,9 +10,9 @@ and use my laptop like a TV. No more walking up to the keyboard!
 - Use your laptop comfortably like a TV from the couch
 
 ## Hardware I used
-- Arduino (any model)
+- Arduino 
 - VS1838B IR Receiver
-- Any IR Remote (I used an old TV remote)
+- Any IR Remote
 
 ## How it works
 You press a button on the remote → Controller catches the signal and 
